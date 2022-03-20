@@ -1,0 +1,208 @@
+1.Ans.Git
+Git is a free, open-source version control software. It was created by Linus Torvalds in 2005. This tool is a version control system that was initially developed to work with several developers on the Linux kernel.
+This basically means that Git is a content tracker. So Git can be used to store content and it is mostly used to store code because of the other features it provides.
+
+Real life projects generally have multiple developers working in parallel. So they need a version control system like Git to make sure that there are no code conflicts between them.
+
+Also, the requirements in such projects change often. So a version control system allows developers to revert and go back to an older version of their code.
+
+The branch system in Git allows developers to work individually on a task (For example: One branch -> One task OR One branch -> One developer). Basically think of Git as a small software application that controls your code base, if you’re a developer.
+
+Github
+
+GitHub is a cloud-based hosting service that lets you manage Git repositories.
+Github is like facebook for programmers. Everyone’s on there. You can look at what they’re working on and easily peruse their code and make suggestions or changes. It’s really open source. “Open source” is not so open if you can’t easily study it. With github, all of the code is easily inspected, as is its entire history.
+
+Github lowers the barriers to collaboration. It’s easy to offer suggested changes to others’ code through github. GitHub is designed as a Git repository hosting service. 
+
+And what exactly is a Git repository hosting service? It’s an online database that allows you to keep track of and share your Git version control projects outside of your local computer/server. Unlike Git, also unlike Git, GitHub is a for-profit service
+
+GitHub expands upon Git’s basic functionality. It presents an extremely intuitive, graphically represented user interface, and provides programmers with built-in control and task-management tools. And because GitHub is cloud-based, an individual’s Git repositories can be remotely accessed by any authorized person, from any computer, anywhere in the world.
+
+Through GitHub, you can share your code with others, giving them the power to make revisions or edits on your various Git branches. This makes it possible for entire teams to coordinate together on single projects in real-time. As changes are introduced, new branches are created, allowing the team to continue to revise the code without overwriting each other's work.
+Other Git repository hosting services also exist; GitLab, BitBucket, and SourceForge are all viable GitHub alternatives, and GitLab even offers a built-in option which allows GitHub users to migrate their projects directly into GitLab.
+
+
+2.Ans. 2. Explain the steps to download, installed and Configure git on your PC
+Step 1: Navigate to the download page of official git website https://git-scm.com/downloads and download Git client for windows.
+
+Step 2: By running the installer file, the wizard will progress with the usual following steps :
+
+– Welcome screen
+
+– License agreement
+
+– Installation folder
+
+– Choose the components to be installed.
+
+– Start menu configuration
+
+along with these, wizards proceeds further with configuration specifics, which will be explained in the consequent steps.
+
+Step 3: Adding the PATH environment
+
+By default, the installer will choose ‘Use Github from Github Bash Only’.
+Use Github from the Windows Command Prompt’ will prevent the user from using Unix commands and allows you to run with windows prompt.
+
+‘Use Github and optional UNIX tools from the windows command prompt’ enables usage of Github from Windows prompt also aided with few UNIX commands
+
+Step 4: Configuring the line ending conversions
+
+In this step, we specify how GitHub should treat line feed because deducing new lines varies with different operating system.
+
+Windows and MacOS utilizes \r\n whereas Linux uses just \n. They are represented in general as CRLF(Carriage Return Line Feed) and LF(Line Feed) respectively.
+
+For now, we will move with the first option.
+
+
+Step 5: Configure the terminal emulator to use with Git Bash.
+
+we have two options :
+
+– Use MinTTY
+
+– Use default cmd.exe of Windows OS.
+
+If you are comfortable with the Linux command line, the former option is recommended, otherwise opt for the second. As the wizard explains, the console window has few limitations such as fixed windows width, the scroll-back is limited and displays only up till certain range for navigating through command history and explicit configuration is required to use Non-ASCII Character, whereas MinTTY doesn’t hold any such restraints.
+
+Step 6: Configuring extra options.
+
+This step includes two options :
+
+– File system caching
+
+– Git credential manager
+
+Step 6.1)
+
+File System Caching: Enabling caching will improve application performance
+
+Step 6.2)
+
+Git credential manager: The function of GCM is to store credentials in the Windows Credentials Manager to avoid repeated authorizations and validations
+
+As the installation gets completed, click Finish to exit the setup
+
+After being set up, we need to test it to make sure the software has been installed and can run Github well. To check, open the console  and run the command git –version, which should return the git version running as shown 
+
+Note: git –-help provides help/manual information about Git.
+
+Setting up GUI based GitHub for Windows (GIT desktop)
+
+GitHub Desktop is a Graphical desktop application which enables adding files and other related git operations.
+
+This GUI aided application can be downloaded in https://desktop.github.com/
+
+
+
+You can use the GitHub Desktop client locally without connecting to a remote repository.
+
+With the GitHub Desktop app, it is extremely simple to initialize a repository, stage files, and issue commit
+
+Step 1: Login
+
+Feed the GitHub credentials
+
+If you do not have a GitHub account, you can signup for one at http://github.com
+
+Step 2: Configure
+
+You will be prompted to enter the Full name and the mail id.
+
+The commits proceeded with the current account will be associated with the name and mail id given.
+
+Step 3: Repositories
+
+Navigate to github.com and create a new repository as shown below :
+
+Specify the name and visibility of repository
+
+once the repository is created, click on ‘Set up in Desktop’ which will launch the application.
+
+Required directory/folder is selected where the repository is ought to be stored.
+
+How to Install Github for Linux?
+
+The following command will aid how to download and install Github for Linux:
+
+sudo apt-get install git
+
+The above command is for Ubuntu and works for Ubuntu 16.04 to Ubuntu 18.04 LTS. Unlike windows, GitHub does not specifically support GUI based desktop client for Linux, but you can opt for a few third party proprietary tools GitKraken or GitBlade or Cycligent Git Tool. Also, there is an active fork of the repository which provides pre-built Linux binaries, which can be downloaded from
+
+https://github.com/shiftkey/desktop
+
+Here we will walk-through command-line Git configuration
+
+Configuring GitHub
+
+After you install Github, use the following two commands by replacing “user_name” with your GitHub username and replacing “email_id” with your email-id you used to create your GitHub account.
+
+git config –global user.name “user_name”
+
+git config –global user.email “email_id”
+
+If you do not have a GitHub, you can signup for one at http://github.com
+
+Creating a Local Repository
+
+Create a folder on your system. This will act as a local repository which will later hit the GitHub website. For doing so, the following command is used :
+
+git init testGit
+
+Upon successful creation of repository following will be displayed:
+
+Initialized empty Git repository in /home/codebind/testGit/
+
+This line may vary depending on your system. 
+here, testGit is the folder that is created and “init” makes the folder a GitHub repository. Change the directory to this newly created folder:
+
+cd testGit
+
+configured account credentials of the git can be found in a .gitconfig file.
+
+once the account is set up, you can create the workspace directory and get on with the git operations.
+
+3.Answ. Create a directory to contain the project.
+Go into the new directory.
+Type git init.
+Write some code.
+Type git add to add the files (see the typical use page).
+Type git commit.
+The first file to create (and add and commit) is probably a ReadMe file, either as plain text or with Markdown, describing the project.
+
+Markdown allows you to add a bit of text markup, like hyperlinks, bold/italics, or to indicate code with a monospace font. Markdown is easily converted to html for viewing in a web browser, and GitHub will do this for you automatically.
+
+
+4.Answ. The "git push" command is used to push into the repository. The push command can be considered as a tool to transfer commits between local and remote repositories. The basic syntax is given below:
+
+$ git push <option> [<Remote URL><branch name><refspec>...]  
+
+There are always a few ways to link the local repository to the remote repository.
+
+From remote: This happens with the help of the Git Fork command when the repository is already available on GitHub. User makes a git fork or git clone to the same repository at local. (Note: We cover this in the next chapter)
+
+From local: This happens with the help of the Git Remote command when the repository is first created on local. And then the user connects it to the remote repository.
+
+5.Answ. 5.answer:
+Push Command
+
+The Git push command is used to push the local repository content to a remote repository. After a local repository has been modified, a push is executed to share the modifications with remote team members. Pushing is the way commits are transferred from the local repository to the remote repository. 
+
+Pull / Pull Request
+
+The term pull is used to receive data from GitHub. It fetches and merges changes from the remote server to your working directory. The git pull command is used to pull a repositories
+
+Pull request is a process for a developer to notify team members that they have completed a feature. Once their feature branch is ready, the developer files a pull request via their remote server account. Pull request announces all the team members that they need to review the code and merge it into the master branch.
+
+COMMIT 
+
+A commit, or "revision", is an individual change to a file (or set of files). It's like when you save a file, except with Git, every time you save it creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of what changes were made when and by who. Commits usually contain a commit message which is a brief description of what changes were
+
+STAGE 
+
+To stage a file is simply to prepare it finely for a commit. Git, with its index allows you to commit only certain parts of the changes you've done since the last commit. Say you're working on two features - one is finished, and one still needs some work done. You'd like to make a commit and go home (5 o'clock, finally!) but wouldn't like to commit the parts of the second feature, which is not done yet. You stage the parts you know belong to the first feature, and commit. Now your commit is your project with the first feature done, while the second is still in work-in-progress in your working directory.
+
+BRANCH 
+
+A Git branch is essentially an independent line of development. You can take advantage of branching when working on new features or bug fixes because it isolates your work from that of other team members.
